@@ -18,7 +18,7 @@ public class Main {
 		Scanner in = new Scanner(System.in);
 
 		RoomGenerator R = new RoomGenerator();
-		R.RoomGenerate();
+		//R.RoomGenerate();
 		
 	//WORKS! Now just clean up!
 		//Put this on github!
@@ -35,28 +35,14 @@ public class Main {
 			switch (choice) {
 			
 			case START:
-				int input;
-				int levelUpPoints = 5;
-				int health = 3;
-				int strength = 1;
-				int dexterity = 1;
-				int intelligence = 1;
+				
 				
 				System.out.println("Welcome to _____");
 				System.out.println("");
 				System.out.println("Character Creation");
 				System.out.println("___________________");
-				System.out.println("You have " + levelUpPoints + " level up points to spend");
-				
-				System.out.println("Health: " + health);
-				System.out.println("Strength: " + strength);
-				System.out.println("Dexterity: " + dexterity);
-				System.out.println("Intelligence: " + intelligence);
-
-				input = in.nextInt();
-				strength = strength + input;
-
-				
+				Player player = new Player(5, 1, 1, 1);
+				player.getLevel();
 				
 				
 			break;
