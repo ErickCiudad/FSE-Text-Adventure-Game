@@ -42,7 +42,22 @@ public class Main {
 				System.out.println("Character Creation");
 				System.out.println("___________________");
 				Player player = new Player(5, 1, 1, 1);
+				player.setLevelHelp();
+				System.out.println("___________________");
 				player.getLevel();
+				System.out.println("You may level up five times");
+				player.levelUp();
+				player.levelUp();
+				player.levelUp();
+				player.levelUp();
+				player.levelUp();
+				System.out.println("___________________");
+				System.out.println("You are now ready to begin your journey. . .");
+				
+
+
+				
+				
 				
 				
 			break;
