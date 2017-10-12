@@ -6,19 +6,22 @@ public class RoomGenerator {
 
 	boolean forest1 = true;
 	boolean forest2 = true;
-
+	boolean forest3 = true;
+	boolean forest4 = true;
+	boolean forest5 = true;
+	boolean forest6 = true;
+	boolean forest7 = true;
+	boolean forest8 = true;
+	boolean forest9 = true;
+	boolean forest10 = true;
+	int forestCounter = 0;
 
 	public void RoomGenerate () {
-		/*
-		 * Any order, but must go through most of levels first
-		 * Forest THEN Cave THEN Castle
-		 * 
-		 * */
 		
 		Scanner in = new Scanner (System.in);
 		String setting = "";
 		
-		int level = 1;
+		int area = 1;
 		int roomChoice;
 		
 		/*
@@ -26,17 +29,21 @@ public class RoomGenerator {
 		System.out.println(nbr);
 		*/
 		
-		switch (level) {
+		switch (area) {
 		case 1 : 
 			//Forest
 			setting = "Forest";
 			
-			int nbr = ThreadLocalRandom.current().nextInt(1, 2 + 1);
+			int nbr = ThreadLocalRandom.current().nextInt(1, 10 + 1);
 			switch(nbr) 	{
 				case 1: {
 					
 					if(forest1 == false) {System.out.println("Already done"); RoomGenerate();}
 					forest1 = false;
+					forestCounter++;
+					if(forestCounter == 5) {
+						area = 2;
+					}
 					
 					System.out.println("(1)Straight ahead there is a dirt path that leads to a clearing");
 					System.out.println("(2)To your right, a dirt path winds down deeper into the woods");
@@ -64,6 +71,10 @@ public class RoomGenerator {
 					
 					if(forest2 == false) {System.out.println("Already done"); RoomGenerate();}
 					forest2 = false;
+					forestCounter++;
+					if(forestCounter == 5) {
+						area = 2;
+					}
 				
 					System.out.println(setting + nbr);
 					RoomGenerate();
@@ -72,49 +83,105 @@ public class RoomGenerator {
 				break;
 
 				case 3: {
+					if(forest3 == false) {System.out.println("Already done"); RoomGenerate();}
+					forest3 = false;
+					forestCounter++;
+					if(forestCounter == 5) {
+						area = 2;
+					}
 					System.out.println(setting + nbr);
+					RoomGenerate();
 
 				}
 				break;
 
 				case 4: {
+					if(forest4 == false) {System.out.println("Already done"); RoomGenerate();}
+					forest4 = false;
+					forestCounter++;
+					if(forestCounter == 5) {
+						area = 2;
+					}
 					System.out.println(setting + nbr);
+					RoomGenerate();
 
 				}
 				break;
 
 				case 5: {
+					if(forest5 == false) {System.out.println("Already done"); RoomGenerate();}
+					forest5 = false;
+					forestCounter++;
+					if(forestCounter == 5) {
+						area = 2;
+					}
 					System.out.println(setting + nbr);
+					RoomGenerate();
 
 				}
 				break;
 
 				case 6: {
+					if(forest6 == false) {System.out.println("Already done"); RoomGenerate();}
+					forest6 = false;
+					forestCounter++;
+					if(forestCounter == 5) {
+						area = 2;
+					}
 					System.out.println(setting + nbr);
+					RoomGenerate();
 
 				}
 				break;
 
 				case 7: {
+					if(forest7 == false) {System.out.println("Already done"); RoomGenerate();}
+					forest7 = false;
+					forestCounter++;
+					if(forestCounter == 5) {
+						area = 2;
+					}
 					System.out.println(setting + nbr);
+					RoomGenerate();
 
 				}
 				break;
 
 				case 8: {
+					if(forest8 == false) {System.out.println("Already done"); RoomGenerate();}
+					forest8 = false;
+					forestCounter++;
+					if(forestCounter == 5) {
+						area = 2;
+					}
 					System.out.println(setting + nbr);
+					RoomGenerate();
 
 				}
 				break;
 
 				case 9: {
+					if(forest9 == false) {System.out.println("Already done"); RoomGenerate();}
+					forest9 = false;
+					forestCounter++;
+					if(forestCounter == 5) {
+						area = 2;
+					}
 					System.out.println(setting + nbr);
+					RoomGenerate();
 
 				}
 				break;
 
 				case 10: {
+					if(forest10 == false) {System.out.println("Already done"); RoomGenerate();}
+					forest10 = false;
+					forestCounter++;
+					if(forestCounter == 5) {
+						area = 2;
+					}
 					System.out.println(setting + nbr);
+					RoomGenerate();
 
 				}
 				break;
@@ -126,7 +193,7 @@ public class RoomGenerator {
 			
 		case 2 : 
 			// Cave
-			System.out.println("Two");
+			System.out.println("Two CAVE");
 			break;
 			
 		case 3 : 

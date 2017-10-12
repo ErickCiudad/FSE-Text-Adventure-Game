@@ -2,14 +2,16 @@ import java.util.Scanner;
 
 public class Player {
 
-	int health;
+	public static int health;
 	int strength;
 	int dexterity;
 	int intelligence;
+	int battleHealth;
 	Scanner in = new Scanner(System.in);
 	
 	public Player(int health, int strength, int dexterity, int intelligence) {
 		this.health = health;
+		this.battleHealth = health;
 		this.strength = strength;
 		this.dexterity = dexterity;
 		this.intelligence = intelligence;
@@ -47,6 +49,7 @@ public class Player {
 		switch(levelChoice) {
 			case 1 :
 				health++;
+				battleHealth = health;
 				System.out.println("Health: " + health);
 				break;
 			case 2:

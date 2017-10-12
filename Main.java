@@ -18,6 +18,7 @@ public class Main {
 		Scanner in = new Scanner(System.in);
 
 		RoomGenerator R = new RoomGenerator();
+		EventGenerator E = new EventGenerator();
 		//R.RoomGenerate();
 		
 	//WORKS! Now just clean up!
@@ -36,6 +37,17 @@ public class Main {
 			
 			case START:
 				
+				E.eventGenerate();
+				E.eventGenerate();
+				E.eventGenerate();
+				E.eventGenerate();
+				E.eventGenerate();
+				E.eventGenerate();
+				E.eventGenerate();
+				E.eventGenerate();
+				E.eventGenerate();
+				E.eventGenerate();
+
 				
 				System.out.println("Welcome to _____");
 				System.out.println("");
@@ -54,8 +66,13 @@ public class Main {
 				System.out.println("___________________");
 				System.out.println("You are now ready to begin your journey. . .");
 				
+				E.testing();
+				player.levelUp();
 
-
+				
+				//R.RoomGenerate();
+//				E.eventGenerate();
+				
 				
 				
 				
