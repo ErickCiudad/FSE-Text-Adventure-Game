@@ -3,10 +3,10 @@ import java.util.Scanner;
 public class Player {
 
 	public static int health;
-	int strength;
-	int dexterity;
-	int intelligence;
-	int battleHealth;
+	public static int strength;
+	public static int dexterity;
+	public static int intelligence;
+	public static int battleHealth;
 	Scanner in = new Scanner(System.in);
 	
 	public Player(int health, int strength, int dexterity, int intelligence) {
@@ -72,7 +72,13 @@ public class Player {
 			
 	}
 	
-	public void getLevel() {		
+	public static void getLevel() {		
+		
+		if(health < 0) {health = 0;}//gameOver has yet to be built
+		if(strength < 0) {strength = 0;}
+		if(dexterity < 0) {dexterity = 0;}
+		if(intelligence < 0) {intelligence = 0;}
+		
 		System.out.println("Health: " + health);
 		System.out.println("Strength: " + strength);
 		System.out.println("Dexterity: " + dexterity);
