@@ -66,21 +66,12 @@ public class Main {
 				System.out.println("___________________");
 				System.out.println("You are now ready to begin your journey. . .");
 				
-				E.testing();
-				E.testing();
-				E.testing();
-				E.testing();
-				E.testing();
-				E.testing();
-				E.testing();
-				E.testing();
-				E.testing();
-				E.testing();
-				E.testing();
-				E.testing();
-				E.testing();
-				E.testing();
-				E.testing();
+			E.testing();
+			E.testing();
+			E.testing();
+			E.testing();
+			E.testing();
+			
 				
 
 

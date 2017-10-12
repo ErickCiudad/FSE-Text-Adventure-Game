@@ -7,7 +7,7 @@ public class Player {
 	public static int dexterity;
 	public static int intelligence;
 	public static int battleHealth;
-	Scanner in = new Scanner(System.in);
+	public static Scanner in = new Scanner(System.in);
 	
 	public Player(int health, int strength, int dexterity, int intelligence) {
 		this.health = health;
@@ -33,14 +33,14 @@ public class Player {
 		this.intelligence = intelligence;
 	}
 	
-	public void setLevelHelp() {
+	public static void setLevelHelp() {
 		System.out.println("Health: Allows you to take damage and lowers odds of being defeated");
 		System.out.println("Strength: Increases attack damage, makes you more capable of physical feats");
 		System.out.println("Dexterity: Increases ranged attack damage, makes you more capable of acrobatic feats");
 		System.out.println("Intelligence: Increases magical attack damage, makes you more capable of intellectual feats");
 	}
 	
-	public void levelUp() {
+	public static void levelUp() {
 		getLevel();
 		System.out.println("Which would you like to level up? (1)Health, (2)Strength, (3)Dexterity, (4)Intelligence, (Any other number)Help");
 		int levelChoice = in.nextInt();
@@ -50,19 +50,19 @@ public class Player {
 			case 1 :
 				health++;
 				battleHealth = health;
-				System.out.println("Health: " + health);
+				getLevel();
 				break;
 			case 2:
 				strength++;
-				System.out.println("Strength: " + strength);
+				getLevel();
 				break;
 			case 3:
 				dexterity++;
-				System.out.println("Dexterity: " + dexterity);
+				getLevel();
 				break;
 			case 4:
 				intelligence++;
-				System.out.println("Intelligence: " + intelligence);
+				getLevel();
 				break;
 			default:
 				setLevelHelp();
