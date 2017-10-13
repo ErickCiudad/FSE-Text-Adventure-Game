@@ -6,6 +6,7 @@ public class Player {
 	public static int strength;
 	public static int dexterity;
 	public static int intelligence;
+	public static int allDamage;
 	public static int battleHealth;
 	public static Scanner in = new Scanner(System.in);
 	
@@ -73,6 +74,8 @@ public class Player {
 	}
 	
 	public static void getLevel() {		
+		
+		allDamage = strength + dexterity + intelligence;
 		
 		if(health < 0) {health = 0;}//gameOver has yet to be built
 		if(strength < 0) {strength = 0;}

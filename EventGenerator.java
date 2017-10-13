@@ -6,19 +6,19 @@ public class EventGenerator {
 	int eventNbr;
 	String potionColor;
 	String potionTexture;
+	String enemy;
+	String enemyType;
+	int enemyHealth;
+	int enemyDamage;
+	boolean runAway;
+	int eventChoice;
+	
 	Scanner eventIn = new Scanner (System.in);
 	
 	/*TODO
 	 * 
 	 * fights
 	 * 
-	 * roomGenerator
-	 * IDEA:
-	 * left right infront, all pick from big rng of adjectives and stuff, asks for forward left and right, but input doesn't affect anything lol
-	 * 
-	 * maybe make sun set and rise every now and then, as well as weather effects
-	 * 
-	 * skillChecks
 	 * 
 	 * */
 	
@@ -459,8 +459,114 @@ public class EventGenerator {
 		
 	}
 	
-	public void fight () {
+	public void enemyGenerator () {
 					
+		eventNbr = ThreadLocalRandom.current().nextInt(1, 4 + 1);
+		
+		switch(eventNbr) {
+		case 1: //strength
+			
+			eventNbr = ThreadLocalRandom.current().nextInt(1, 4 + 1);
+			enemyType = "Physical";
+			if(eventNbr == 1) {enemy = "Goblin"; enemyHealth = 1; enemyDamage= 1;}
+			if(eventNbr == 2) {enemy = "Hobgoblin"; enemyHealth = 2;  enemyDamage= 2;}
+			if(eventNbr == 3) {enemy = "Orc"; enemyHealth = 3;  enemyDamage= 3;}
+			if(eventNbr == 4) {enemy = "Brutal Enforcer"; enemyHealth = 4;  enemyDamage= 4;}
+			
+			break;
+			
+		case 2: //dexterity
+			
+			eventNbr = ThreadLocalRandom.current().nextInt(1, 4 + 1);
+			enemyType = "Ranged";
+			
+			if(eventNbr == 1) {enemy = "Bat"; enemyHealth = 1; enemyDamage= 1;}
+			if(eventNbr == 2) {enemy = "Winged Imp "; enemyHealth = 2; enemyDamage= 2;}
+			if(eventNbr == 3) {enemy = "Headhunter Falcon"; enemyHealth = 3; enemyDamage= 3;}
+			if(eventNbr == 4) {enemy = "Winged Maneater"; enemyHealth = 4; enemyDamage= 4;}
+			
+			break;
+			
+		case 3: //intelligence
+			
+			eventNbr = ThreadLocalRandom.current().nextInt(1, 4 + 1);
+			enemyType = "Magical";
+			
+			if(eventNbr == 1) {enemy = "Ghost"; enemyHealth = 1; enemyDamage= 1;}
+			if(eventNbr == 2) {enemy = "Black Magic Practicioner"; enemyHealth = 2; enemyDamage= 2;}
+			if(eventNbr == 3) {enemy = "Poltergeist"; enemyHealth = 3; enemyDamage= 3;}
+			if(eventNbr == 4) {enemy = "Dark Sorcerer"; enemyHealth = 4; enemyDamage= 4;}
+			
+			break;
+			
+		case 4: //all around
+			
+			eventNbr = ThreadLocalRandom.current().nextInt(1, 4 + 1);
+			enemyType = "All";
+			
+			if(eventNbr == 1) {enemy = "Accomplished Fighter"; enemyHealth = 2; enemyDamage= 3;}
+			if(eventNbr == 2) {enemy = "Elvish Hunter"; enemyHealth = 3; enemyDamage= 6;}
+			if(eventNbr == 3) {enemy = "Champion Challenger"; enemyHealth = 5; enemyDamage= 8;}
+			if(eventNbr == 4) {enemy = "Worldeater Dragon"; enemyHealth = 5; enemyDamage= 15;}
+			
+			
+			break;
+		}
+		
+	}
+	
+	public void fight () {
+		
+		runAway = false;
+		enemyGenerator();
+		
+		System.out.println("You encounter a " + enemy);
+		System.out.println("It's type is  " + enemyType);
+		
+		System.out.println("Your stats");
+		Player.getLevel();
+		
+		
+		
+		do {
+			System.out.println("Your Battle Health: " + Player.battleHealth);
+			if (enemyType == "Physical") {System.out.println("Your damage is your strength: " + Player.strength );}
+			if (enemyType == "Ranged") {System.out.println("Your damage is your dexterity: " + Player.dexterity );}
+			if (enemyType == "Magical") {System.out.println("Your damage is your intelligence: " + Player.intelligence );}
+			if (enemyType == "All") {System.out.println("Your damage is all your damage stats combined: " + Player.allDamage);}
+
+			System.out.println("");
+			
+			System.out.println("The " + enemy + "'s Battle Health: " + enemyHealth);
+			System.out.println("The " + enemy+ "'s Damage: " + enemyDamage);
+
+			System.out.println("(1) Fight (2) Run Away");
+			eventChoice = eventIn.nextInt();
+			
+			if (eventChoice == 2) {
+				eventNbr = ThreadLocalRandom.current().nextInt(1, 2 + 1);
+
+				if(eventNbr == 1) {
+					System.out.println("You failed to get away");
+					eventChoice = 1;
+				}
+				
+				if(eventNbr == 2) {
+					System.out.println("You got away!"); 
+					runAway = true;
+				}
+								
+			}
+			
+			if(eventChoice == 1) {
+				System.out.println("You fight");
+			}
+			
+			
+		}
+		
+		while (enemyHealth!= 0 && Player.battleHealth != 0 && !runAway);
+		
 	}
 		
 	

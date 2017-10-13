@@ -55,9 +55,10 @@ public class Main {
 				player.levelUp();
 				System.out.println("You are now ready to begin your journey. . .");
 
-				R.RoomGenerate();
-				E.eventGenerate();
-
+//				R.RoomGenerate();
+//				E.eventGenerate();
+				
+				E.fight();
 				
 				
 //				
