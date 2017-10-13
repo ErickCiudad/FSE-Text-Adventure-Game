@@ -4,210 +4,77 @@ import java.util.concurrent.ThreadLocalRandom;
 
 public class RoomGenerator {
 
-	boolean forest1 = true;
-	boolean forest2 = true;
-	boolean forest3 = true;
-	boolean forest4 = true;
-	boolean forest5 = true;
-	boolean forest6 = true;
-	boolean forest7 = true;
-	boolean forest8 = true;
-	boolean forest9 = true;
-	boolean forest10 = true;
-	int forestCounter = 0;
-
+	int roomNbr;
+	
 	public void RoomGenerate () {
 		
-		Scanner in = new Scanner (System.in);
-		String setting = "";
-		
-		int area = 1;
-		int roomChoice;
-		
-		/*
-		int nbr = ThreadLocalRandom.current().nextInt(1, 3 + 1);
-		System.out.println(nbr);
-		*/
-		
-		switch (area) {
-		case 1 : 
-			//Forest
-			setting = "Forest";
-			
-			int nbr = ThreadLocalRandom.current().nextInt(1, 10 + 1);
-			switch(nbr) 	{
-				case 1: {
-					
-					if(forest1 == false) {System.out.println("Already done"); RoomGenerate();}
-					forest1 = false;
-					forestCounter++;
-					if(forestCounter == 5) {
-						area = 2;
-					}
-					
-					System.out.println("(1)Straight ahead there is a dirt path that leads to a clearing");
-					System.out.println("(2)To your right, a dirt path winds down deeper into the woods");
-					
-					//Main.choice = in.nextInt();
-					do {
-						roomChoice = in.nextInt();
-						if(roomChoice == 1) {
-							System.out.println("You are on a grassy patch of land in a circular clearing in a the forest.");
-							RoomGenerate();
-						}
-						else if(roomChoice == 2) {
-							System.out.println("You wind deeper into the forest. The light get's dimmer. The shrubbery around is dense and invading.");				
-							RoomGenerate();
-						}
-						else {
-							System.out.println("Invalid command");
-						}
-					}
-					while(roomChoice != 1 || roomChoice != 2);
-				}
-				break;
-				
-				case 2: {
-					
-					if(forest2 == false) {System.out.println("Already done"); RoomGenerate();}
-					forest2 = false;
-					forestCounter++;
-					if(forestCounter == 5) {
-						area = 2;
-					}
-				
-					System.out.println(setting + nbr);
-					RoomGenerate();
-
-				}
-				break;
-
-				case 3: {
-					if(forest3 == false) {System.out.println("Already done"); RoomGenerate();}
-					forest3 = false;
-					forestCounter++;
-					if(forestCounter == 5) {
-						area = 2;
-					}
-					System.out.println(setting + nbr);
-					RoomGenerate();
-
-				}
-				break;
-
-				case 4: {
-					if(forest4 == false) {System.out.println("Already done"); RoomGenerate();}
-					forest4 = false;
-					forestCounter++;
-					if(forestCounter == 5) {
-						area = 2;
-					}
-					System.out.println(setting + nbr);
-					RoomGenerate();
-
-				}
-				break;
-
-				case 5: {
-					if(forest5 == false) {System.out.println("Already done"); RoomGenerate();}
-					forest5 = false;
-					forestCounter++;
-					if(forestCounter == 5) {
-						area = 2;
-					}
-					System.out.println(setting + nbr);
-					RoomGenerate();
-
-				}
-				break;
-
-				case 6: {
-					if(forest6 == false) {System.out.println("Already done"); RoomGenerate();}
-					forest6 = false;
-					forestCounter++;
-					if(forestCounter == 5) {
-						area = 2;
-					}
-					System.out.println(setting + nbr);
-					RoomGenerate();
-
-				}
-				break;
-
-				case 7: {
-					if(forest7 == false) {System.out.println("Already done"); RoomGenerate();}
-					forest7 = false;
-					forestCounter++;
-					if(forestCounter == 5) {
-						area = 2;
-					}
-					System.out.println(setting + nbr);
-					RoomGenerate();
-
-				}
-				break;
-
-				case 8: {
-					if(forest8 == false) {System.out.println("Already done"); RoomGenerate();}
-					forest8 = false;
-					forestCounter++;
-					if(forestCounter == 5) {
-						area = 2;
-					}
-					System.out.println(setting + nbr);
-					RoomGenerate();
-
-				}
-				break;
-
-				case 9: {
-					if(forest9 == false) {System.out.println("Already done"); RoomGenerate();}
-					forest9 = false;
-					forestCounter++;
-					if(forestCounter == 5) {
-						area = 2;
-					}
-					System.out.println(setting + nbr);
-					RoomGenerate();
-
-				}
-				break;
-
-				case 10: {
-					if(forest10 == false) {System.out.println("Already done"); RoomGenerate();}
-					forest10 = false;
-					forestCounter++;
-					if(forestCounter == 5) {
-						area = 2;
-					}
-					System.out.println(setting + nbr);
-					RoomGenerate();
-
-				}
-				break;
-
-			}
-			
-			
-			break;
-			
-		case 2 : 
-			// Cave
-			System.out.println("Two CAVE");
-			break;
-			
-		case 3 : 
-			// Castle
-			System.out.println("Three");
-			break;
-			
-		
-			
-		}
-
+		System.out.println("On your left, " + Scene());		
 	}
 	
-	///Main happens here
+	public String Scene() {
+
+		roomNbr = ThreadLocalRandom.current().nextInt(1, 1 + 1);
+		
+		switch (roomNbr) {
+			case 1: return "some trees and a grassy hill is visible.";
+			case 2: return "a large field opens up";
+			case 3: return "";
+			case 4: return "";
+			case 5: return "";
+			case 6: return "";
+			case 7: return "";
+			case 8: return "";
+			case 9: return "";
+			case 10: return "";
+			case 11: return "";
+			case 12: return "";
+			case 13: return "";
+			case 14: return "";
+			case 15: return "";
+			case 16: return "";
+			case 17: return "";
+			case 18: return "";
+			case 19: return "";
+			case 20: return "";
+			case 21: return "";
+			case 22: return "";
+			case 23: return "";
+			case 24: return "";
+			case 25: return "";
+			case 26: return "";
+			case 27: return "";
+			case 28: return "";
+			case 29: return "";
+			case 30: return "";
+			case 31: return "";
+			case 32: return "";
+			case 33: return "";
+			case 34: return "";
+			case 35: return "";
+			case 36: return "";
+			case 37: return "";
+			case 38: return "";
+			case 39: return "";
+			case 40: return "";
+			case 41: return "";
+			case 42: return "";
+			case 43: return "";
+			case 44: return "";
+			case 45: return "";
+			case 46: return "";
+			case 47: return "";
+			case 48: return "";
+			case 49: return "";
+			case 50: return "";
+		}
+		
+		return "error: it shouldn't get to here, only options are 1 - 50";
+		
+	}
+	
+	public void roomTest() {
+		RoomGenerate();
+	}
 	
 	}
 	
