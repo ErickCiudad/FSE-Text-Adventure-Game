@@ -3,6 +3,7 @@ import java.util.Scanner;
 public class Main {
 	
 	public static int choice = 0;
+	public static boolean gameStatus;
 	//public means declared outside of main()?
 
 	
@@ -25,6 +26,7 @@ public class Main {
 		//Put this on github!
 	
 		do {
+			gameStatus = true;
 			System.out.println("Welcome!");
 			System.out.println("1: Start the game");
 			System.out.println("2: Guide");
@@ -55,27 +57,17 @@ public class Main {
 				player.levelUp();
 				System.out.println("You are now ready to begin your journey. . .");
 
-//				R.RoomGenerate();
-//				E.eventGenerate();
+				for (int i = 0; i <= 30; i++) {
+					
+				if(gameStatus)	{
+					
+				R.RoomGenerate();
+				E.eventGenerate();
 				
-				E.fight();
-				
-				
-//				
-//			E.testing();
-//			E.testing();
-//			E.testing();
-//			E.testing();
-//			E.testing();
-			
-				
-
-
-				
-				//R.RoomGenerate();
-//				E.eventGenerate();
+				}
 				
 				
+				}
 				
 				
 				

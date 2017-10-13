@@ -17,7 +17,7 @@ public class EventGenerator {
 	
 	/*TODO
 	 * 
-	 * fights
+	 * Gameover
 	 * 
 	 * Input validation oh god
 	 * 
@@ -45,17 +45,15 @@ public class EventGenerator {
 				peopleEvent();
 			}
 			
-//			else if (eventNbr <= 6) {
-//				//20% 5 - 6
-//				//This should be enemy
-//				System.out.println("Enemy");
-//				fight();
-//			}
+			else if (eventNbr <= 7) {
+				//30% 5 - 7
+				//This should be enemy
+				fight();
+			}
 			
 			else {
-				//40% 6-10
+				//30% 8-10
 				//skillCheckEvent();
-				System.out.println(eventNbr + "check");
 				skillCheckEvent();
 				
 			}
@@ -573,7 +571,8 @@ public class EventGenerator {
 				}
 				
 				if(enemyHealth <= 0) {
-					System.out.println("You defeated the " + enemy + "! LevelUp!");
+					System.out.println("You defeated the " + enemy + "! LevelUp Twice! ");
+					Player.levelUp();
 					Player.levelUp();
 				}
 			
