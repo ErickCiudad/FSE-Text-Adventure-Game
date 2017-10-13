@@ -19,6 +19,7 @@ public class EventGenerator {
 	 * 
 	 * fights
 	 * 
+	 * Input validation oh god
 	 * 
 	 * */
 	
@@ -560,6 +561,23 @@ public class EventGenerator {
 			
 			if(eventChoice == 1) {
 				System.out.println("You fight");
+				
+				Player.battleHealth -= enemyDamage;
+				if (enemyType == "Physical") {enemyHealth -= Player.strength ;}
+				if (enemyType == "Ranged") {enemyHealth -= Player.dexterity; }
+				if (enemyType == "Magical") {enemyHealth -= Player.intelligence; }
+				if (enemyType == "All") {enemyHealth -= Player.allDamage;}
+				
+				if(Player.battleHealth <= 0) {			
+					System.out.println("Game Over");
+				}
+				
+				if(enemyHealth <= 0) {
+					System.out.println("You defeated the " + enemy + "! LevelUp!");
+					Player.levelUp();
+				}
+			
+				
 			}
 			
 			
