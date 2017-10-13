@@ -5,15 +5,23 @@ import java.util.concurrent.ThreadLocalRandom;
 public class RoomGenerator {
 
 	int roomNbr;
+	Scanner roomIn = new Scanner(System.in);
 	
 	public void RoomGenerate () {
 		
-		System.out.println("On your left, " + Scene());		
+		System.out.println(roomFlavor());
+		System.out.println("On your left, " + Scene());
+		System.out.println("On your right, " + Scene());		
+	
+		System.out.println("Where would like to go? (1) left, (2) right");
+		roomIn.nextInt();
+		
+		
 	}
 	
 	public String Scene() {
 
-		roomNbr = ThreadLocalRandom.current().nextInt(1, 1 + 1);
+		roomNbr = ThreadLocalRandom.current().nextInt(1, 50 + 1);
 		
 		switch (roomNbr) {
 			case 1: return "some trees and a grassy hill is visible.";
@@ -46,34 +54,57 @@ public class RoomGenerator {
 			case 28: return "a small, radiant and orange glow of fire is apparent in the far distance";
 			case 29: return "the path converges around a bend and leads out of sight";
 			case 30: return "you smell what you can't be certain is, yet definitely smells like, cooking";
-			case 31: return "";
-			case 32: return "";
-			case 33: return "";
-			case 34: return "";
-			case 35: return "";
-			case 36: return "";
-			case 37: return "";
-			case 38: return "";
-			case 39: return "";
-			case 40: return "";
-			case 41: return "";
-			case 42: return "";
-			case 43: return "";
-			case 44: return "";
-			case 45: return "";
-			case 46: return "";
-			case 47: return "";
-			case 48: return "";
-			case 49: return "";
-			case 50: return "";
+			case 31: return "fog lingers, obscuring view";
+			case 32: return "a large building stands, it's wooden doors busted open and ajar";
+			case 33: return "a human built courtyard opens up, a fountain positioned in the center, yet devoid of water";
+			case 34: return "a hedge opens up, and it is noticably twisty and maze-like in nature";
+			case 35: return "a large and grassy field opens, with neat flowers of varying colors arranged along the perimeter";
+			case 36: return "a lantern is lit on a post";
+			case 37: return "a tight hallway runs straight and out of view";
+			case 38: return "a small animal runs towards you, perhaps in a panic from something in that direction";
+			case 39: return "a small and ominous howling noise, perhaps wind, perhaps something else, echoes off in the distance";
+			case 40: return "the floor continues then directly cuts off into an overview of a large chasm";
+			case 41: return "a river runs into a large and wooden wheel, turning slowly. It is unclear what purpose it serves.";
+			case 42: return "a thin and decrepit ladder leans against an erected wall.";
+			case 43: return "a small spiral iron stair case runs downward";
+			case 44: return "a room opens up with bookcases on eachside, and scrolls strewn about";
+			case 45: return "a large room opens up with a big whole in the center, a giant fire burning in the center. It is unclear what objects are the fuel of the fire, but apparent several things were tossed in. ";
+			case 46: return "a room with a cracked and crumbled ceiling is in view. The crumbled material of the building forms a loose and jagged staircase to the second floor.";
+			case 47: return "a large cage hangs by chain from a post stabbed into the wall, the cage overhangs a steep dropoff";
+			case 48: return "a bridge spans over a valley";
+			case 49: return "a colossal statue stands in a valley, it's hands upraised, forming a bridge to the other side. A waterfall runs over and through the shoulders of the giant.";
+			case 50: return "a thin and coarse circular hallway opens up. Crystals seem to appear and glisten out of the sides of the wall";
 		}
 		
-		return "error: it shouldn't get to here, only options are 1 - 50";
+		return "";
 		
 	}
 	
 	public void roomTest() {
 		RoomGenerate();
+	}
+	
+	public String roomFlavor() {
+		
+		roomNbr = ThreadLocalRandom.current().nextInt(1, 50 + 1);
+		
+		switch (roomNbr) {
+		case 1: return "It begins to rain.";
+		case 2: return "It is night";
+		case 3: return "It is day";
+		case 4: return "It gets foggy";
+		case 5: return "It gets bitterly cold";
+		case 6: return "It warms up";
+		case 7: return "It gets very hot";
+		case 8: return "It starts getting chilly";
+		case 9: return "It gets humid";
+		case 10: return "The weather is clear";
+		}
+		if(roomNbr >= 11) {
+			
+		}
+		
+		return "";
 	}
 	
 	}

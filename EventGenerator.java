@@ -16,6 +16,8 @@ public class EventGenerator {
 	 * IDEA:
 	 * left right infront, all pick from big rng of adjectives and stuff, asks for forward left and right, but input doesn't affect anything lol
 	 * 
+	 * maybe make sun set and rise every now and then, as well as weather effects
+	 * 
 	 * skillChecks
 	 * 
 	 * */

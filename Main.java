@@ -36,18 +36,8 @@ public class Main {
 			switch (choice) {
 			
 			case START:
-//				
+			
 //				E.eventGenerate();
-//				E.eventGenerate();
-//				E.eventGenerate();
-//				E.eventGenerate();
-//				E.eventGenerate();
-//				E.eventGenerate();
-//				E.eventGenerate();
-//				E.eventGenerate();
-//				E.eventGenerate();
-//				E.eventGenerate();
-
 				
 				System.out.println("Welcome to _____");
 				System.out.println("");
@@ -64,12 +54,18 @@ public class Main {
 				player.levelUp();
 				player.levelUp();
 				System.out.println("You are now ready to begin your journey. . .");
+
+				R.RoomGenerate();
+				E.eventGenerate();
+
 				
-			E.testing();
-			E.testing();
-			E.testing();
-			E.testing();
-			E.testing();
+				
+//				
+//			E.testing();
+//			E.testing();
+//			E.testing();
+//			E.testing();
+//			E.testing();
 			
 				
 
