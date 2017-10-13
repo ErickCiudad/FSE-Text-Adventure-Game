@@ -63,7 +63,6 @@ public class Main {
 				player.levelUp();
 				player.levelUp();
 				player.levelUp();
-				System.out.println("___________________");
 				System.out.println("You are now ready to begin your journey. . .");
 				
 			E.testing();
