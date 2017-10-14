@@ -557,8 +557,7 @@ public class EventGenerator {
 				
 				if(enemyHealth <= 0) {
 					if (Main.gameStatus = true) {
-					System.out.println("You defeated the " + enemy + "! LevelUp Twice! ");
-					Player.levelUp();
+					System.out.println("You defeated the " + enemy + "! LevelUp! ");
 					Player.levelUp();
 				}
 				}
