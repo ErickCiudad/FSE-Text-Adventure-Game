@@ -17,7 +17,9 @@ public class EventGenerator {
 	
 	/*TODO
 	 * 
-	 * Gameover
+	 * Guide
+	 * 
+	 * 
 	 * 
 	 * Input validation oh god
 	 * 
