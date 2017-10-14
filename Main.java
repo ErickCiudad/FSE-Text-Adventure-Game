@@ -22,7 +22,7 @@ public class Main {
 		EventGenerator E = new EventGenerator();
 		//R.RoomGenerate();
 		
-	//WORKS! Now just clean up!
+		//WORKS! Now just clean up!
 		//Put this on github!
 	
 		do {
@@ -57,19 +57,23 @@ public class Main {
 				player.levelUp();
 				System.out.println("You are now ready to begin your journey. . .");
 
-				for (int i = 0; i <= 30; i++) {
+				for (int i = 0; i <= 20; i++) {
 					
 				if(gameStatus)	{
 					
 				R.RoomGenerate();
 				E.eventGenerate();
+					
+				if(i == 20) {
+					System.out.println("You have completed your journey! It was long and arduous, and now you are done!");
+				}
 				
 				}
 				
 				
 				}
 				
-				
+
 				
 			break;
 			

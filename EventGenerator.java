@@ -215,11 +215,7 @@ public class EventGenerator {
 	
 	public void peopleEvent() {
 		
-		eventNbr = ThreadLocalRandom.current().nextInt(1, 1 + 1);
-		
-		switch (eventNbr) {
-		
-		case 1:
+	
 			//Good
 			
 			eventNbr = ThreadLocalRandom.current().nextInt(1, 2 + 1);
@@ -278,20 +274,8 @@ public class EventGenerator {
 					break;
 				
 				}
+				
 			
-			
-			
-
-			break;
-			
-			case 2:
-				//Bad
-				System.out.println(eventNbr);
-				//There is no bad, too harsh
-
-			break;
-		
-			}
 		}
 		
 	}
@@ -568,21 +552,23 @@ public class EventGenerator {
 				
 				if(Player.battleHealth <= 0) {			
 					System.out.println("Game Over");
+					Main.gameStatus = false;
 				}
 				
 				if(enemyHealth <= 0) {
+					if (Main.gameStatus = true) {
 					System.out.println("You defeated the " + enemy + "! LevelUp Twice! ");
 					Player.levelUp();
 					Player.levelUp();
 				}
-			
+				}
 				
 			}
 			
 			
 		}
 		
-		while (enemyHealth!= 0 && Player.battleHealth != 0 && !runAway);
+		while (enemyHealth > 0 && Player.battleHealth > 0 && !runAway);
 		
 	}
 		

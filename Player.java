@@ -76,6 +76,7 @@ public class Player {
 	public static void getLevel() {		
 		
 		allDamage = strength + dexterity + intelligence;
+		battleHealth = health;
 		
 		if(health < 0) {health = 0;}//gameOver has yet to be built
 		if(strength < 0) {strength = 0;}
