@@ -17,7 +17,7 @@ public class EventGenerator {
 	
 	/*TODO
 	 * 
-	 * Guide
+	 * 
 	 * 
 	 * 
 	 * 
@@ -350,7 +350,7 @@ public class EventGenerator {
 					}
 					else {
 						System.out.println("You react slowly and merely block with your arm. The bolt still hurts you. Health(-1)\n");
-						Player.dexterity--;	
+						Player.health--;	
 						Player.getLevel();
 					}																				
 				}
@@ -553,11 +553,11 @@ public class EventGenerator {
 				if (enemyType == "All") {enemyHealth -= Player.allDamage;}
 				
 				if(Player.battleHealth <= 0) {			
-					System.out.println("Game Over");
 					Main.gameStatus = false;
+					System.out.println("Game Over");
 				}
 				
-				if(enemyHealth <= 0) {
+				if(enemyHealth <= 0 && Player.battleHealth > 0) {
 					if (Main.gameStatus = true) {
 					System.out.println("You defeated the " + enemy + "! LevelUp! ");
 					Player.levelUp();

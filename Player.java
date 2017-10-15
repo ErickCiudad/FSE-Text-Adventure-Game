@@ -78,7 +78,7 @@ public class Player {
 		allDamage = strength + dexterity + intelligence;
 		battleHealth = health;
 		
-		if(health < 0) {health = 0;}//gameOver has yet to be built
+		if(health <= 0) {health = 0; System.out.println("Game Over"); Main.gameStatus = false;}
 		if(strength < 0) {strength = 0;}
 		if(dexterity < 0) {dexterity = 0;}
 		if(intelligence < 0) {intelligence = 0;}
